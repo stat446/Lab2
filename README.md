@@ -1,1 +1,42 @@
 # Lab2
+
+
+## Lab Overview
+All students attending class in the group can turn in a single document with each participants name. Students not attending class will need to complete their own lab.
+
+This lab is focused on understanding the uncertainty in a SRS from a hypothetical population. We will use *fake* data so that we can compare point estimates with the true population parameter. This also allows us to take multiple samples to visualize and understand the sampling distribution. However, in most scenarios we will only have the ability to take a single sample for making statistical inferences.
+
+##### 1. (4 points)
+The code below creates a *fake* data set. Briefly describe what this code is doing.
+
+```{r, messages = F}
+set.seed(09052019)
+sampling_frame <- tibble(student_id = 1:20,
+                             snow_days = base::sample(x = 0:50, size = 20, 
+                                                      prob = c(.20,rep(.80/50, 50)), replace = T))
+```
+
+
+##### 2. (4 points) 
+Suppose you take a random sample of 2 students, what is the probability that a student is selected in the sample? Justify your response.
+
+
+##### 3. (4 points) 
+Suppose you take a random sample of 12 students, what is the probability that a student is selected in the sample? Justify your response.
+
+
+##### 4. (4 points)
+Take a single sample of 12 students and construct a *point estimate* for the mean number of days skiied by students in the class. Describe your results, how well do they match the truth?
+
+##### 5. 
+Take several more (~1000) samples of 12 students and construct *point estimates* for each sample.
+
+###### a. (4 points)
+Construct a histogram of these point estimates computed from these samples and include a summary caption/comment.
+
+###### b. (4 points)
+Describe the bias and variance of the *point estimator* (the process that generated the 1000 samples)
+
+###### c. (4 points)
+Suppose another *point estimator* used the sample median as the point estimate, how would you (computationally) compare the two procedures?
+
