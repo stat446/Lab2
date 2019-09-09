@@ -9,7 +9,7 @@ This lab is focused on understanding the uncertainty in a SRS from a hypothetica
 ##### 1. (4 points)
 The code below creates a *fake* data set. Briefly describe what this code is doing.
 
-```{r, messages = F}
+```
 set.seed(09052019)
 sampling_frame <- tibble(student_id = 1:20,
                              snow_days = base::sample(x = 0:50, size = 20, 
